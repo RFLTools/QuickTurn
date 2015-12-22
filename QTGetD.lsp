@@ -6,14 +6,15 @@
 ;
 ;     Returns (DEye DGear DRear DHook LockAng LoadBase LoadAngle WheelFront WheelRear)
 ;
-;     DEye = Distance from block insertion point to the eye point (the path point of the vehicle)
-;     DGear = Distance from block insertion point to front wheels
-;     DHook = Distance from block insertion point to hitch (king pin)
-;     LockAng = Wheel lock angle
-;     LoadBase = Distance from block insertion point to load pivot/base point
-;     LoadAngle = Distance from block insertion point to load angle definition point
-;     WheelFront = Width between front wheels (not used at this time)
-;     WheelRear = Width between rear wheels (not used at this time)
+;     DEye (D0) = Distance from block insertion point to the eye point (the path point of the vehicle)
+;     DGear (DG) = Distance from block insertion point to front wheels
+;     DRear (D) = Distance from block insertion point to rear wheels
+;     DHook (DH) = Distance from block insertion point to hitch (king pin)
+;     LockAng (LOCKANG) = Wheel lock angle
+;     LoadBase (LB) = Distance from block insertion point to load pivot/base point
+;     LoadAngle (LA) = Distance from block insertion point to load angle definition point
+;     WheelFront (WF) = Width between front wheels (not used at this time)
+;     WheelRear (WR) = Width between rear wheels (not used at this time)
 ;
 ;
 (defun QT:GETD (ENT / D D0 DG DH ENTLIST LA LB LOCKANG WF WR)
