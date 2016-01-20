@@ -4,6 +4,7 @@
 ;
 ;     FILE2BINARY is a routine to create hex codes from a file to be used in MAKExxx.lsp
 ;
+;          Creates a text file representing the input file which can be used in conjunction with MAKExxx.lsp
 ;
 (defun C:FILE2BINARY (/ *error* C1 C2 CODE FILE FILEBINARY FLAG OUTFILE _ReadStream)
  (defun *error* (msg)

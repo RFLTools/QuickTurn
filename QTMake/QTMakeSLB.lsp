@@ -1,3 +1,10 @@
+;
+;
+;     Program written by Robert Livingston, 2015-11-18
+;
+;     QTMAKESLB creates the QuickTurn Vehicle Library Slide Library file
+;
+;
 (defun QTMAKESLB (FILE / C FILEBINARY _WriteStream)
 ;  _WriteStream obtained from Michael Puckett (https://www.linkedin.com/in/puckettm)
 ;     http://www.theswamp.org/index.php?topic=17465.0
