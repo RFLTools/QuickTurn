@@ -1,6 +1,6 @@
 @echo off
 rem
-rem Simple copy batch to create combines lsp file
+rem Simple copy batch to create combined lsp file
 rem
 if exist LoadQuickTurn.lsp del LoadQuickTurn.lsp
 rem
