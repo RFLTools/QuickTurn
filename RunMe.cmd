@@ -2,7 +2,7 @@
 rem
 rem Simple copy batch to create combines lsp file
 rem
-if exist RunMe.lsp del LoadQuickTurn.lsp
+if exist LoadQuickTurn.lsp del LoadQuickTurn.lsp
 rem
 COPY ".\QTGetD.lsp" + ^
      ".\QTGetPList.lsp" + ^
