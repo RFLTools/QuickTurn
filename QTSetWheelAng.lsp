@@ -5,8 +5,8 @@
 ;     QTSETWHEELANG updates the wheel angle of all the nested wheel blocks based on their position in a block to the turn angle of the block
 ;
 ;
-(defun QT:SETWHEELANG (C QTVLIST PLIST / ANG DIRECTION NEWWHEELANG NODE P0 P1 P2 PC R)
- (defun NEWWHEELANG (NODE ANG / A ANG2 D D0 DG DH ENT ENT2 ENT3 ENTLIST LOCKANG P SCALE TAN TOL WF WR X Y)
+(defun QT:SETWHEELANG (C QTVLIST PLIST / ANG CMAX DIRECTION NEWWHEELANG NODE P0 P1 P2 PC R)
+ (defun NEWWHEELANG (NODE ANG / A ANG2 D D0 DG DH ENT ENT2 ENT3 ENTLIST LA LB LOCKANG P SCALE TAN TMP TOL WF WR X Y)
   (setq TOL 0.000001)
   (defun TAN (ANG)
    (/ (sin ANG) (cos ANG))
@@ -28,13 +28,15 @@
          (setq P (cdr (assoc 10 ENTLIST)))
          (setq X (* (car P) SCALE))
          (setq Y (* (cadr P) SCALE))
-         (setq D0 nil DG nil D nil DH nil LA nil LB nil LOCKANG nil WF nil WR nil STEP nil)
+         (setq D0 nil DG nil D nil DH nil LA nil LB nil LOCKANG nil WF nil WR nil)
          (setq TMP (QT:GETD (car NODE)))
          (setq D0 (nth 0 TMP)
                DG (nth 1 TMP)
                D (nth 2 TMP)
                DH (nth 3 TMP)
                LOCKANG (nth 4 TMP)
+               LB (nth 5 TMP)
+               LA (nth 6 TMP)
                WF (nth 7 TMP)
                WR (nth 8 TMP)
          )
@@ -52,6 +54,7 @@
    )
   )
  )
+ (setq CMAX (1- (length QTVLIST)))
  (foreach NODE QTVLIST
   (if (or (= C CMAX) (= nil PLIST))
    (NEWWHEELANG NODE 0.0)
