@@ -6,7 +6,7 @@
 ;              Note:  Command not implemented
 ;
 ;
-(defun QT:TWHEELS (/ C CECOLOR COLOR DX DY NODE P1 P2 TRACEWHEEL)
+(defun QT:TWHEELS (/ C CECOLOR COLOR D D0 DG DH DX DY LOCKANG LA LB NODE P1 P2 TRACEWHEEL TMP WF WR)
  (setq CECOLOR (getvar "CECOLOR"))
  (defun TRACEWHEEL (/ N)
   (setq N 0)
@@ -38,7 +38,17 @@
  (setq C 0)
  (while (< C (length QTVLIST))
   (setq NODE (nth C QTVLIST))
-  (GETD (car NODE))
+  (setq TMP (QT:GETD (car NODE)))
+  (setq D0 (nth 0 TMP)
+        DG (nth 1 TMP)
+        D (nth 2 TMP)
+        DH (nth 3 TMP)
+        LOCKANG (nth 4 TMP)
+        LB (nth 5 TMP)
+        LA (nth 6 TMP)
+        WF (nth 7 TMP)
+        WR (nth 8 TMP)
+  )
   ; Front Left
   (if (/= nil WF)
    (progn

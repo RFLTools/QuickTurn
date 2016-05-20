@@ -7,5 +7,6 @@ Notes:  Use "RunMe.cmd" to combine all necessary files to single "LoadQuickTurn.
 
 Status:
 
-QuikTurn not working.
-QTMake working.
+First cut appears to be work - still needing full eval and qc
+
+All you need to run is "LoadQuickTurn.lsp" unless you want to eval code.  If so copy the entire project and use "RunMe.cmd"

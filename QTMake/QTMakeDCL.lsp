@@ -2,13 +2,13 @@
 ;
 ;     Program written by Robert Livingston, 03-03-11
 ;
-;     MAKEDCL is a utility for writing temporary DCL files
-;             2015-11-17 : Revised to be standalone for QTMAKE
+;     QT:MAKEDCL is a utility for writing temporary DCL files
+;                2015-11-17 : Revised to be standalone for QTMAKE
 ;
 ;     DCL's included:
 ;                              QTMAKE.dcl
 ;
-(defun QTMAKEDCL (OUTFILENAME DCLNAME / OUTFILE)
+(defun QT:MAKEDCL (OUTFILENAME DCLNAME / OUTFILE)
  (cond ((= (strcase DCLNAME) "QTMAKE")
         (progn
          (setq OUTFILE (open OUTFILENAME "w"))

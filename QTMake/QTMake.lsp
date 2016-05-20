@@ -3,7 +3,7 @@
 ;     Program written by Robert Livingston, 2015-04-13
 ;     Adapted from MAKEENT
 ;
-;     QTMAKE is a utility to create QuickTurn Vehicle Blocks
+;     C:QTMAKE is a utility to create QuickTurn Vehicle Blocks
 ;
 ;
 (defun C:QTMAKE (/ DCL_ID ACCEPTQTMAKE ACTIVEDOC ACTIVESPACE ANGBASE ANGDIR ATTREQ BLOCKINDEX BLOCKLIST CANCELQTMAKE CONTINUEFLAG D D0 DG DH ENT ENTLIST ENTSET L LA LB P PBASE PLA PLB WF WR UPDATEBLOCK TMP)
@@ -98,12 +98,12 @@
   (if (= QTMAKEDCLNAME nil)
    (progn
     (setq QTMAKEDCLNAME (vl-filename-mktemp "rfl.dcl"))
-    (QTMAKEDCL QTMAKEDCLNAME "QTMAKE")
+    (QT:MAKEDCL QTMAKEDCLNAME "QTMAKE")
    )
    (if (= nil (findfile QTMAKEDCLNAME))
     (progn
      (setq QTMAKEDCLNAME (vl-filename-mktemp "rfl.dcl"))
-     (QTMAKEDCL QTMAKEDCLNAME "QTMAKE")
+     (QT:MAKEDCL QTMAKEDCLNAME "QTMAKE")
     )
    )
   )
@@ -182,7 +182,7 @@
       (setq ENT (entlast))
       (setq ENTLIST (entget ENT))
       (ssadd ENT ENTSET)
-      (setq TMP (QTGETD ENT))
+      (setq TMP (QT:GETD ENT))
       (setq D0 (nth 0 TMP)
             DG (nth 1 TMP)
             D (nth 2 TMP)
