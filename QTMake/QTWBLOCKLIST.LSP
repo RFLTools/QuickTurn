@@ -33,7 +33,7 @@
    (progn
     (setq BLOCKNESTLIST nil)
     (setq OUTFILE (open OUTFILE "w"))
-    (princ "(defun QTMAKE (BLKNAME / )\n" OUTFILE)
+    (princ "(defun QT:MAKE (BLKNAME / )\n" OUTFILE)
     (princ " (cond\n" OUTFILE)
     (setq C 0)
     (while (< C (sslength ENTSET))

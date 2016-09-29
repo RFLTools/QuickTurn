@@ -4,11 +4,11 @@ rem Simple copy batch to create combined lsp file
 rem
 if exist LoadQuickTurn.lsp del LoadQuickTurn.lsp
 rem
-COPY /B ".\QTWrapperStart.lsp" + ^
+COPY /B ".\QTGetD.lsp" + ^
+        ".\QTWrapperStart.lsp" + ^
         ".\QTCircle3P.lsp" + ^
         ".\QTCopy.lsp" + ^
         ".\QTDrawEnvelope.lsp" + ^
-        ".\QTGetD.lsp" + ^
         ".\QTGetEnvelope.lsp" + ^
         ".\QTGetPList.lsp" + ^
         ".\QTGetTurnAng.lsp" + ^
@@ -21,10 +21,10 @@ COPY /B ".\QTWrapperStart.lsp" + ^
         ".\QTSetWheelAng.lsp" + ^
         ".\QTTPath.lsp" + ^
         ".\QTTWheels.lsp" + ^
+        ".\QTWrapperEnd.lsp" + ^
         ".\QTMAke\QTMake.lsp" + ^
         ".\QTMAke\QTMakeDCL.lsp" + ^
         ".\QTMAke\QTMakeOUT.lsp" + ^
-        ".\QTMAke\QTMakeSLB.lsp" + ^
-        ".\QTWrapperEnd.lsp" ^
+        ".\QTMAke\QTMakeSLB.lsp" ^
         ".\LoadQuickTurn.lsp"
 pause

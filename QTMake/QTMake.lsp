@@ -125,7 +125,7 @@
   (if (= nil (findfile QTMAKESLBNAME))
    (progn
     (setq QTMAKESLBNAME (vl-filename-mktemp "rfl.slb"))
-    (QTMAKESLB QTMAKESLBNAME)
+    (QT:MAKESLB QTMAKESLBNAME)
    )
   )
   (start_image "IMAGE")
@@ -145,11 +145,11 @@
  (if (/= nil BLOCKINDEX)
   (progn
    (if (= nil (cdr (nth BLOCKINDEX BLOCKLIST)))
-    (QTMAKE (car (nth BLOCKINDEX BLOCKLIST)))
+    (QT:MAKE (car (nth BLOCKINDEX BLOCKLIST)))
     (foreach NODE (cdr (nth BLOCKINDEX BLOCKLIST))
      (if (= "*" (substr NODE 1 1))
-      (if (= nil (tblsearch "BLOCK" (substr NODE 2))) (QTMAKE (substr NODE 2)))
-      (if (= nil (tblsearch "BLOCK" NODE)) (QTMAKE NODE))
+      (if (= nil (tblsearch "BLOCK" (substr NODE 2))) (QT:MAKE (substr NODE 2)))
+      (if (= nil (tblsearch "BLOCK" NODE)) (QT:MAKE NODE))
      )
     )
    )
@@ -170,10 +170,12 @@
    (setvar "OSMODE" 0)
    (setq P PBASE)
    (setq ENTSET (ssadd))
+   (setq LA nil LB nil)
    (foreach NODE (cdr (nth BLOCKINDEX BLOCKLIST))
     (if (/= "*" (substr NODE 1 1))
      (progn
-      (setq D nil D0 nil DG nil DH nil L nil LA nil LB nil WF nil WR nil)
+;      (setq D nil D0 nil DG nil DH nil L nil LA nil LB nil WF nil WR nil)
+      (setq D nil D0 nil DG nil DH nil L nil WF nil WR nil)
       (vla-insertblock ACTIVESPC
                        (vlax-3D-point P)
                        NODE
@@ -191,12 +193,14 @@
             D (nth 2 TMP)
             DH (nth 3 TMP)
             LOCKANG (nth 4 TMP)
+            LB (nth 5 TMP)
+            LA (nth 6 TMP)
             WF (nth 7 TMP)
             WR (nth 8 TMP)
       )
       (if (and (= nil PLB) (/= nil LB))
        (progn
-        (setq PLB (list (+ (car P) LB) (cadr P) (caddr P)))
+        (setq PLB (list (- (+ (car P) LB) D0) (cadr P) (caddr P)))
         (setq LB nil)
        )
       )
