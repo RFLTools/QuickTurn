@@ -53,7 +53,7 @@
     (setq C 1)
     (while (< C (length PLIST))
      (setq P (nth C PLIST))
-     (setq ANG (QT:NEWANG ANG P (nth (- C 1) PLIST) D D0))
+     (setq ANG (QT:NEWANG ANG C PLIST (- D D0)))
      (setq ANGLIST (append ANGLIST (list ANG)))
      (setq P0 (list (- (car P) (* D0 (cos ANG)))
                     (- (cadr P) (* D0 (sin ANG)))))
