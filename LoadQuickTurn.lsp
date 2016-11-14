@@ -231,6 +231,7 @@
  )
  (setq ENTLISTNEW (list (list (cons 0 "BLOCK")
                               (cons 2 "*U")
+                              (cons 8 "0")
                               (cons 70 1)
                               (list 10 0.0 0.0 0.0)
                         )
@@ -273,6 +274,7 @@
                       (+ (nth 1 P2) (* (nth 0 P) (sin ANG2)) (* (nth 1 P) (cos ANG2)))))
        (setq ENTLISTNEW (append ENTLISTNEW
                                (list (list (cons 0 "SOLID")
+                                           (cons 8 "0")
                                            (list 10 (car PA) (cadr PA) 0.0)
                                            (list 11 (car PB) (cadr PB) 0.0)
                                            (list 12 (car PC) (cadr PC) 0.0)
