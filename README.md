@@ -13,7 +13,7 @@ All you need to run is "LoadQuickTurn.lsp" unless you want to eval code.  If so 
 
 Background:
 
-QuickTurn breaks the path into a series of short straightline segments.  For each straight line it calculates a new veehicle angle based on the previus angle (relative to the straight path segment).  The straight line formulae is defined by the straight line formual found on page 2052 of:
+QuickTurn breaks the path into a series of short straightline segments.  For each straight line it calculates a new veehicle angle based on the previus angle (relative to the straight path segment).  The straight line formulae is defined by that found on page 2052 of:
 
 Mathematical and Computer Modelling
 Volume 49, Issues 9–10, May 2009, Pages 2049–2060
