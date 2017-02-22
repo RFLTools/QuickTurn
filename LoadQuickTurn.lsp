@@ -1350,7 +1350,7 @@
 
  (setq BLOCKLIST (list (list "TAC-1999-A-BUS" "*WheelLeftM2" "*WheelRightM2" "TAC-1999-A-BUS-FRONT" "TAC-1999-A-BUS-REAR")
                        (list "TAC-1999-ATD" "*WheelLeftM1" "*WheelRightM1" "TAC-1999-ATD-TRUCK" "TAC-1999-ATD-TRAILER1" "TAC-1999-ATD-PUP" "TAC-1999-ATD-TRAILER2")
-                       (list "TAC-1999-B-12" "*WheelLeftM1" "*WheelRightM1" "TAC-1999-B-12")
+                       (list "TAC-1999-B-12" "*WheelLeftM2" "*WheelRightM2" "TAC-1999-B-12")
                        (list "TAC-1999-BTD" "*WheelLeftM1" "*WheelRightM1" "TAC-1999-BTD-TRUCK" "TAC-1999-BTD-TRAILER1" "TAC-1999-BTD-TRAILER2")
                        (list "TAC-1999-HSU" "*WheelLeftM2" "*WheelRightM2" "TAC-1999-HSU")
                        (list "TAC-1999-I-BUS" "*WheelLeftM2" "*WheelRightM2" "TAC-1999-I-BUS")
