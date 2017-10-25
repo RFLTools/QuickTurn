@@ -9,7 +9,7 @@
 (defun C:FILE2BINARY (/ *error* C1 C2 CODE FILE FILEBINARY FLAG OUTFILE _ReadStream)
  (defun *error* (msg)
   (close OUTFILE)
-  (setq *error* nil)
+  ;(setq *error* nil)
   (print msg)
  )
 ;  _ReadStream obtained from Michael Puckett (https://www.linkedin.com/in/puckettm)

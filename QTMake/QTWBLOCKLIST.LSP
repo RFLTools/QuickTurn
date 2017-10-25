@@ -15,7 +15,7 @@
   (if (/= nil OUTFILE) (close OUTFILE))
   (setvar "CMDECHO" CMDECHO)
   (setvar "DIMZIN" DIMZIN)
-  (setq *error* nil)
+  ;(setq *error* nil)
   (princ msg)
  )
 
