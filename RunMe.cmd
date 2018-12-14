@@ -25,6 +25,7 @@ COPY /B ".\QTGetD.lsp" + ^
         ".\QTMAke\QTMake.lsp" + ^
         ".\QTMAke\QTMakeDCL.lsp" + ^
         ".\QTMAke\QTMakeOUT.lsp" + ^
-        ".\QTMAke\QTMakeSLB.lsp" ^
+        ".\QTMAke\QTMakeSLB.lsp" + ^
+        ".\QTRMax.lsp" ^
         ".\LoadQuickTurn.lsp"
 pause
