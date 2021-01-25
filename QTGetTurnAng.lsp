@@ -49,6 +49,15 @@
      (setq ANG (- (* 2.0 pi) ANG))
     )
    )
+   (if (> ANG (/ pi 2.0))
+    (progn
+     (setq ANG (- pi ANG))
+     (if (= DIRECTION "Right")
+      (setq DIRECTION "Left")
+      (setq DIRECTION "Right")
+     )
+    )
+   )
    (if (and (= QT:LOCKANGWARNING nil) (/= LOCKANG 0.0))
     (if (> ANG (* LOCKANG (/ pi 180.0)))
      (progn
