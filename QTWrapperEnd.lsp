@@ -82,7 +82,7 @@
    )
   )
  )
- (command "._UCS" "P")
+ (command-s "._UCS" "P")
  (setvar "CMDECHO" CMDECHO)
  (setvar "ANGBASE" ANGBASE)
  (setvar "ANGDIR" ANGDIR)

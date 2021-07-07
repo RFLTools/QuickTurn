@@ -24,8 +24,8 @@
                       QT:MOVEVEHICLE QT:NEWANG QT:NEWWHEELANG QT:PLACE QT:SETPATH QT:SETWHEELPATH QT:TPATH
                       QT:TWHEELS
                    )
- (command "._UNDO" "M")
- (command "._UCS" "W")
+ (command-s "._UNDO" "M")
+ (command-s "._UCS" "W")
  (setq CMDECHO (getvar "CMDECHO"))
  (setvar "CMDECHO" 0)
  (setq OSMODE (getvar "OSMODE"))
@@ -61,7 +61,7 @@
  (defun *error* (msg)
   (foreach NODE QTVLIST (redraw (car NODE) 1))
   (foreach NODE QTVLIST (entdel (last NODE)))
-  (command "._UCS" "P")
+  (command-s "._UCS" "P")
   (setvar "CMDECHO" CMDECHO)
   (setvar "ANGBASE" ANGBASE)
   (setvar "ANGDIR" ANGDIR)

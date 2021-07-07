@@ -91,7 +91,7 @@
                 (cons 50 0.0)
           )
  )
- (command "._DRAWORDER" (entlast) "" "BACK")
+ (command-s "._DRAWORDER" (entlast) "" "BACK")
  (setvar "CECOLOR" CECOLOR)
  (setvar "OSMODE" OSMODE)
 )

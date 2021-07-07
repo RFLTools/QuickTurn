@@ -33,7 +33,7 @@
  )
  (setvar "OSMODE" 0)
  (setvar "ORTHOMODE" 0)
- (command "._ROTATE" ENT "" P1 "R" P1 P2 P)
+ (command-s "._ROTATE" ENT "" P1 "R" P1 P2 P)
  (setvar "OSMODE" OSMODE)
  (setvar "ORTHOMODE" ORTHOMODE)
  T
