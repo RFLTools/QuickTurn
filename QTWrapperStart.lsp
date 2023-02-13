@@ -22,7 +22,7 @@
                       ; Functions
                       QT:CIRCLE3P QT:COPY QT:DRAWENVELOPE QT:GETENVELOPE QT:GETPLIST QT:MAKETEMPBLOCK
                       QT:MOVEVEHICLE QT:NEWANG QT:NEWWHEELANG QT:PLACE QT:SETPATH QT:SETWHEELPATH QT:TPATH
-                      QT:TWHEELS
+                      QT:TWHEELS RFL:MAKEPL
                    )
  (command-s "._UNDO" "M")
  (command-s "._UCS" "W")

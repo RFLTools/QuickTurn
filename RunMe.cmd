@@ -21,6 +21,7 @@ COPY /B ".\QTGetD.lsp" + ^
         ".\QTSetWheelAng.lsp" + ^
         ".\QTTPath.lsp" + ^
         ".\QTTWheels.lsp" + ^
+        ".\RFLMakePL.lsp" + ^
         ".\QTWrapperEnd.lsp" + ^
         ".\QTMAke\QTMake.lsp" + ^
         ".\QTMAke\QTMakeDCL.lsp" + ^
