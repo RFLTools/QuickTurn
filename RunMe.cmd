@@ -9,6 +9,7 @@ COPY /B ".\QTGetD.lsp" + ^
         ".\QTCircle3P.lsp" + ^
         ".\QTCopy.lsp" + ^
         ".\QTDrawEnvelope.lsp" + ^
+        ".\QTDrawEnvelope2.lsp" + ^
         ".\QTGetEnvelope.lsp" + ^
         ".\QTGetPList.lsp" + ^
         ".\QTGetTurnAng.lsp" + ^
