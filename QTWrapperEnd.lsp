@@ -40,7 +40,7 @@
       (QT:PLACE C)
       (initget "Forward Back Move Copy enVelope bOundary Step Trace Wheels Exit eXit")
       (QT:SETWHEELANG C QTVLIST PLIST)
-      (setq REP2 (getkword (strcat "\nSA:" (QT:GETTURNANG C PLIST FIRSTLOCKANG) " - Forward/Back/Move/Copy/enVelope/Boundary/Step/Trace/eXit <" REP "> : ")))
+      (setq REP2 (getkword (strcat "\nSA:" (QT:GETTURNANG C PLIST FIRSTLOCKANG) " - Forward/Back/Move/Copy/enVelope/bOundary/Step/Trace/eXit <" REP "> : ")))
       (if (= REP2 nil) (setq REP2 REP))
       (if (or (= REP2 "Forward") (= REP2 "Back")) (setq REP REP2))
       (cond ((= REP2 "Forward")
